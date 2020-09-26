@@ -1,0 +1,96 @@
+{
+  "total": 100,
+  "count": 10,
+  "offset": 1,
+  "limit": 10,
+  "results": [{
+    "id": "uuid",
+    "type": "video",
+    "creator": {
+      "name": "viaks",
+      "user_name": "vikky007"
+    },
+    "feed": {
+      "uri": "https://video.mp4",
+      "thumbnail": "thumbnail.jpeg",
+      "title": "Nike by Nike"
+    },
+    "products": [{
+      "slug": "Nike-Air-v3",
+      "name": "Nike Air",
+      "description": "Shoes by Nike",
+      "sku": "12435",
+      "images": ["http://nike_1.jpeg", "http://nike2.jpeg"],
+      "masterImage": "https://hi-res.png",
+      "price": "300"
+    }],
+    "likes": 82,
+    "comments": 1,
+    "shares": 1,
+    "shareLink": "https://loyalty/share-link?link='https://..'"
+  }]
+}
+
+{
+  "total":100,
+  "count":10,
+  "offset":1,
+  "limit":10,
+  "results":[
+    {
+      "creator":{
+        "name":"viaks",
+        "user_name":"vikky007"
+      },
+      "feed":{
+        "id": "unique id",
+        "feedType": "quiz",
+        "question":{
+          "questionID":1,
+          "value":"When is the next Cyber?"
+        },
+        "option1":{
+          "optionId":1,
+          "value":"1st Nov 2020"
+        },
+        "option1":{
+          "optionId":1,
+          "value":"1st Nov 2020"
+        },
+        "option1":{
+          "optionId":1,
+          "value":"1st Nov 2020"
+        },
+        "option1":{
+          "optionId":1,
+          "value":"1st Nov 2020"
+        },
+        "answer":{
+          "optionId":1,
+          "value":"1st Nov 2020"
+        },
+        "uri":"https://static.klliq.com/videos/EJUhFO-_YQkH_Ll6tPppf2EkR794aTQQ_hd.mp4",
+        "thumbnail":"https://static.klliq.com/thumbnails/vGRpl-Xw45xfOCborXr3bwAsl0uu_qMA.png",
+        "title":"Nike by Nike"
+      },
+      "products":[
+        {
+          "slug":"Nike-Air-v3",
+          "name":"Nike Air",
+          "description":"Shoes by Nike",
+          "sku":"12435",
+          "price":"12345",
+          "images":[
+            "http://nike_1.jpeg",
+            "http://nike2.jpeg"
+          ],
+          "masterImage":"https://hi-res.png"
+        }
+      ],
+      "likes":82,
+      "comments":1,
+      "shares":1,
+      "shareLink":"https://loyalty/share-link?link='https://..'"
+    }
+  ]
+}
