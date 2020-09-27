@@ -10,6 +10,8 @@ const levels = {
   elite: 9999999
 };
 
+const levelIdx = ["beginner", "fan", "lover", "premium", "elite"];
+
 module.exports = fastify => {
   const {
     LoyaltyRepository,
@@ -32,7 +34,14 @@ module.exports = fastify => {
       };
     }
 
-    return result;
+    const idx = levelIdx.findIndex(lvl => lvl === result.level) + 1;
+
+    const nextLevel = idx !== -1 && levelIdx[Math.min(idx, levelIdx.length-1)]  || "beginner"
+
+    return {
+      ...result,
+      nextLevel
+    };
   };
 
   service.updateLoyaltyPoints = async loyalty => {

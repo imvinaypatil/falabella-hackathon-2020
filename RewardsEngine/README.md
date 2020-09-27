@@ -53,3 +53,11 @@ To view the list of scripts
 $ npm run
 ```
 
+##Techstack
+* mongodb
+* nodejs
+* fastify
+* docker
+
+
+

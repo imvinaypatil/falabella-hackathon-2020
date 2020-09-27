@@ -83,6 +83,9 @@ const getPoints = {
           type: "enum",
           items: ["beginner", "fan", "lover", "premium", "elite"]
         },
+        nextLevel: {
+          type: "string"
+        },
         meta: {
           type: "objects",
           properties: {
