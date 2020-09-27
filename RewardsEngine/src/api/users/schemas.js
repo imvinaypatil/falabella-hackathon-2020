@@ -37,41 +37,39 @@ const errorResponse = {
 
 const user = {
   type: "object",
-  description: "user",
+  description: "user object",
   properties: {
     username: {
       type: "string",
-      description: "user id"
+      description: "unique user name"
     },
-    additionalProperties: true
-  }
-};
+    password: {
+      type: "string",
+      description: "user password"
+    },
+    documentNumber: {
+      type: "string",
+      description: "dni/rut id"
+    },
+    profilePicture: {
+      type: "string",
+      description: "profile display picture"
+    },
+    email: {
+      type: "string"
+    },
+    name: {
+      type: "string"
+    }
+  },
+  additionalProperties: false,
+  required: ["username"]
+}
 
 const create = {
   title: "create user",
   description: "create new user",
-  body: {
-    type: "object",
-    properties: {
-      username: {
-        type: "string",
-        description: "unique user name"
-      },
-      password: {
-        type: "string",
-        description: "user password"
-      },
-      documentNumber: {
-        type: "string",
-        description: "dni/rut id"
-      },
-      profilePicture: {
-        type: "string",
-        description: "profile display picture"
-      }
-    },
-    required: ["username"]
-  },
+  body: user,
   response: {
     200: user,
     "4xx": errorResponse,

@@ -14,7 +14,9 @@ module.exports = fastify => {
     username,
     password,
     documentNumber,
-    profilePicture
+    profilePicture,
+    email,
+    name
   }) => {
     const { value } = await UserRepository.findOneAndReplace(
       { username },
@@ -22,10 +24,14 @@ module.exports = fastify => {
         username,
         password,
         documentNumber,
-        profilePicture
+        profilePicture,
+        email,
+        name
       },
       {
-        upsert: true
+        upsert: true,
+        returnOriginal: false,
+        returnNewDocument: true
       }
     );
     return value;

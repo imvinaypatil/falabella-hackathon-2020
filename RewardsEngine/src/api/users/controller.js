@@ -13,14 +13,18 @@ module.exports = fastify => {
       username,
       password = "",
       documentNumber = "",
-      profilePicture = ""
+      profilePicture = "",
+      email="",
+      name=""
     } = request.body;
 
     const user = await service.create({
       username,
       password,
       documentNumber,
-      profilePicture
+      profilePicture,
+      email,
+      name
     });
 
     reply.send(user);

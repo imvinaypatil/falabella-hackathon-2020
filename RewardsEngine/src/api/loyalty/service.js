@@ -43,7 +43,8 @@ module.exports = fastify => {
       loyalty,
       {
         upsert: true,
-        returnOriginal: false
+        returnOriginal: false,
+        returnNewDocument: true
       }
     );
 

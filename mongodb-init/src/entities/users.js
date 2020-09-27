@@ -24,6 +24,12 @@ module.exports = {
         profilePicture: {
           bsonType: "string"
         },
+        email: {
+          bsonType: "string"
+        },
+        name: {
+          bsonType: "string"
+        },
         createdAt: createdAt,
         lastModified: lastModified
       }

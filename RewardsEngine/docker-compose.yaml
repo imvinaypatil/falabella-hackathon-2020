@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  loyalty:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - MONGODB_CONNECTION=127.0.0.1:27017
+      - MONGODB_DATABASE=hackthon
+    ports:
+      - "4444:4444"
+    volumes:
+      - "symdata:/tmp/cache"
+
+volumes:
+  symdata:
